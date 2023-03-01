@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
   <title>RC - Customer Account Portal Test</title>
-  </head>
+</head>
 
 <body>
+  <h1>Allow Customers to Access Invoices</h1>
   <form action='https://secure.romancart.com/custac.asp' method=post>
-  <input type=hidden value=68069 name=storeid>
-  Email:<input type=text value='' name=email size=50 maxlength=150><br>
-  Password:<input type=password value='' name=custauth size=20 maxlength=20><br>
-  <input type=hidden name=loginfailedurl value='http://www.<Where to go if the login fails>'><br>
-  <input type=submit value='View Invoices'>
+    <input type=hidden value=68069 name=storeid>
+    Email:<input type=text value='' name=email size=50 maxlength=150><br>
+    Password:<input type=password value='' name=custauth size=20 maxlength=20><br>
+    <input type=hidden name=loginfailedurl value='http://www.<Where to go if the login fails>'><br>
+    <input type=submit value='View Invoices'>
+  </form>
+  <h1>Customer Order Tracking</h1>
+  <form action='https://www.romancart.com/track.asp' method=post>
+    <input type=hidden value=68069 name=storeid>
+    Email:<input type=text value='' name=email size=50 maxlength=150><br>
+    Order Number:<input type=text value='' name=orderid size=20 maxlength=10><br>
+    <input type=submit value='Track'>
   </form>
 </body>
 
